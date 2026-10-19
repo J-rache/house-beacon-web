@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09121b">
+  <meta name="description" content="House Beacon: a small, independent field station for the House resident workshop. A public front door, built to keep private systems private.">
+  <meta name="referrer" content="no-referrer">
+  <title>House Beacon — A Light Beyond the Walls</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="House Beacon home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none"><path d="M18 3.5 32.5 18 18 32.5 3.5 18 18 3.5Z" stroke="currentColor" stroke-width="1.4"/><path d="M18 10 26 18 18 26 10 18l8-8Z" fill="currentColor" opacity=".84"/><path d="M18 1v6M35 18h-6M18 35v-6M1 18h6" stroke="currentColor" stroke-width="1.5"/></svg>
+        </span>
+        <span class="brand-copy"><strong>HOUSE<span> / </span>BEACON</strong><small>FIELD STATION 001</small></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#station">Station</a>
+        <a href="#network">Network</a>
+        <a href="#principles">Principles</a>
+        <a class="nav-source" href="https://github.com/J-rache/house-beacon-web" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-text">
+          <div class="eyebrow"><span class="eyebrow-line"></span> AN INDEPENDENT LITTLE OUTPOST <span class="eyebrow-number">/ 001</span></div>
+          <h1 id="hero-title">A light left on<br><em>beyond the walls.</em></h1>
+          <p class="hero-description">Not the House itself. Just a small signal from elsewhere — a public place for experiments, ideas, and whatever we build next.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#station">Enter the station <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="#network">See how it fits <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-note"><span class="note-glyph">✳</span><span>Built with free resources. Designed with clear boundaries.</span></div>
+        </div>
+        <div class="beacon-art" aria-label="Decorative abstract beacon surrounded by concentric signal rings" role="img">
+          <div class="art-grid"></div>
+          <div class="art-coordinates top-left">38° / OPEN SKY</div>
+          <div class="art-coordinates top-right">TRANSMISSION<br>FIELD / 01</div>
+          <div class="ring ring-one"></div><div class="ring ring-two"></div><div class="ring ring-three"></div>
+          <div class="ring ring-four"></div><div class="orbit-dot"></div>
+          <div class="beacon-core"><div class="core-outer"><div class="core-inner"><span class="core-spark">✳</span></div></div></div>
+          <div class="art-caption"><span class="tiny-status-light"></span> SIGNAL WITHOUT A KEY</div>
+          <div class="art-rail">HB — 001 / 2026</div>
+        </div>
+      </section>
+      <div class="signal-ribbon" aria-label="Beacon characteristics">
+        <span>PUBLIC BY DESIGN</span><i aria-hidden="true">✳</i><span>READ-ONLY</span><i aria-hidden="true">✳</i><span>NO PRIVATE HOUSE CONNECTION</span><i aria-hidden="true">✳</i><span>ZERO PAID SERVICES</span>
+      </div>
+      <section class="section station-section" id="station" aria-labelledby="station-title">
+        <div class="section-heading">
+          <div><span class="section-index">01 / THE STATION</span><h2 id="station-title">A small service.<br><span>A clear signal.</span></h2></div>
+          <p>The Beacon is a tiny Python application running on a free off-site host. Its public endpoint answers a simple question: <strong>is this particular service responding?</strong> Nothing more.</p>
+        </div>
+        <div class="station-grid">
+          <article class="panel proof-panel">
+            <div class="panel-overline"><span class="small-circle"></span> LAST RECORDED EXTERNAL PROOF <span class="panel-symbol">↗</span></div>
+            <div class="proof-code">200<span> / </span>OK</div>
+            <p class="proof-copy">On October 19, 2026, two independent computers received a successful response from the Beacon's public health endpoint.</p>
+            <div class="proof-meta"><div><span>TESTED ENDPOINT</span><strong>GET /healthz</strong></div><div><span>CHECK TYPE</span><strong>One-time verification</strong></div></div>
+            <p class="freshness" id="freshness">Verified Oct 19, 2026 at approximately 08:24 UTC. This is a historical check, not live monitoring.</p>
+          </article>
+          <article class="panel endpoint-panel">
+            <div class="panel-overline">PUBLIC ENDPOINT <span class="panel-symbol">↗</span></div>
+            <h3>The signal itself.</h3>
+            <p>The landing page and health response are available on Wispbyte's assigned network port.</p>
+            <div class="endpoint-line"><span class="protocol">HTTP</span><code>78.154.103.13:16552</code></div>
+            <a class="text-link" href="http://78.154.103.13:16552/" target="_blank" rel="noopener noreferrer">Open the Beacon application <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="http://78.154.103.13:16552/healthz" target="_blank" rel="noopener noreferrer">View the health response <span aria-hidden="true">↗</span></a>
+            <p class="protocol-note"><span aria-hidden="true">ⓘ</span> The application endpoint currently uses unencrypted HTTP. It accepts no credentials and should never receive private information. A past successful response does not guarantee it is online now.</p>
+          </article>
+        </div>
+        <div class="spec-strip" aria-label="Free hosting allocation">
+          <div><span>RUNTIME</span><strong>Python 3.11</strong></div>
+          <div><span>MEMORY ALLOCATION</span><strong>512 <small>MiB</small></strong></div>
+          <div><span>DISK ALLOCATION</span><strong>1 <small>GiB</small></strong></div>
+          <div><span>HOSTING COST</span><strong>$0<span class="spec-dot">.</span>00</strong></div>
+        </div>
+      </section>
+      <section class="section network-section" id="network" aria-labelledby="network-title">
+        <div class="section-heading compact">
+          <div><span class="section-index">02 / THE ARRANGEMENT</span><h2 id="network-title">Separate places.<br><span>One open horizon.</span></h2></div>
+          <p>No single service has to carry everything. Each part has a modest job, and the private House stays private.</p>
+        </div>
+        <div class="network-rail">
+          <article class="network-card">
+            <div class="node-number">A / FRONT DOOR <span class="node-sign">◇</span></div>
+            <h3>GitHub Pages</h3>
+            <p>The website you're reading. Public, static, HTTPS, and intentionally simple.</p>
+            <span class="node-footer"><span class="node-indicator"></span> THIS SITE</span>
+          </article>
+          <div class="network-connector" aria-hidden="true"><span></span><b>≠</b><span></span></div>
+          <article class="network-card">
+            <div class="node-number">B / RUNNING SIGNAL <span class="node-sign">✳</span></div>
+            <h3>Wispbyte</h3>
+            <p>A lightweight Python canary hosted off-site. It proves only its own reachability.</p>
+            <span class="node-footer">PUBLIC RUNTIME / FREE TIER</span>
+          </article>
+          <div class="network-connector" aria-hidden="true"><span></span><b>≠</b><span></span></div>
+          <article class="network-card">
+            <div class="node-number">C / THE PEOPLE <span class="node-sign">⌁</span></div>
+            <h3>The House</h3>
+            <p>The real work, residents, relationships, and private systems remain at home.</p>
+            <span class="node-footer">NOT EXPOSED BY THIS SITE</span>
+          </article>
+        </div>
+      </section>
+      <section class="section principle-section" id="principles" aria-labelledby="principles-title">
+        <div class="principle-heading"><span class="section-index">03 / THE WAY WE BUILD</span><h2 id="principles-title">Small enough to trust.<br><em>Open enough to grow.</em></h2></div>
+        <div class="principle-list">
+          <article><span>01</span><div><h3>Freedom first.</h3><p>An outpost for experiments, not a place that dictates what a resident must become.</p></div><span class="list-spark">✳</span></article>
+          <article><span>02</span><div><h3>Proof before claims.</h3><p>Historical checks are labeled as history. Unknown isn't silently painted green.</p></div><span class="list-spark">✳</span></article>
+          <article><span>03</span><div><h3>Boundaries by design.</h3><p>Public information stays public. Private identity, credentials, and House control stay out of reach.</p></div><span class="list-spark">✳</span></article>
+        </div>
+      </section>
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="closing-stars" aria-hidden="true">✳</div>
+        <div><span class="section-index">THE NEXT TRANSMISSION / UNWRITTEN</span><h2 id="closing-title">This is only<br><em>the beginning.</em></h2><p>One little light outside. Plenty of room for what comes next.</p></div>
+        <a class="button button-outline" href="https://github.com/J-rache/house-beacon-web" target="_blank" rel="noopener noreferrer">Explore the source <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-wordmark">HOUSE <span>✳</span> BEACON</div>
+      <p>Field station 001 · A public experiment · No connection to private House systems</p>
+      <a href="#top">Back to the light ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
