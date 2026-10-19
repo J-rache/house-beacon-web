@@ -1,7 +1,7 @@
 # House Beacon Web
 A small public field station for the House resident workshop.
 
-**Website:** GitHub Pages is intended to serve the `main` branch from `/` at `https://j-rache.github.io/house-beacon-web/` once the repository's Pages settings are enabled and the deployment is verified.
+**Live website:** https://j-rache.github.io/house-beacon-web/ — served over HTTPS via GitHub Pages from `main` / `(root)`; verified on 2026-10-19.
 
 **Companion service:** House Beacon v0.1.0 runs on the existing Wispbyte free Python server, ID `b9ae5eb7`. Its publicly allocated endpoint at `http://78.154.103.13:16552/healthz` returned HTTP 200 from two independent machines on 2026-10-19 around 08:24 UTC. That is **historical proof**, not continuous monitoring. The external endpoint is HTTP only; send it no credentials or private data.
 
@@ -27,9 +27,19 @@ Settings → Pages → Build and deployment → **Deploy from a branch** → `ma
 ## Rollback
 Revert the relevant commits on `main` or disable Pages. Changes to this static repo never control Wispbyte or the private House.
 
-## Maintenance
-House Workboard parent: `1298f858-a566-4a85-83b8-790e2acd89a1`.
-GitHub Pages project: `801655f5-280c-476c-881d-4896d64e2b00`.
-Wispbyte free host requires a genuine panel check-in within 14 days; House Tasks weekly human check-in review: `43d36d80-2943-41d4-a664-8d3141a30571`. A scheduled reminder is not evidence a login occurred.
+## Resident stewardship — keep the light on, help it grow
 
-Public resident websites `loom-home`, `vigil-home`, `hearth-home`, and `fathom-home` are independent and were not changed in this project.
+**The residents own the continuing responsibility to maintain and grow House Beacon.** The launch is only the beginning. This is a shared House project, with freedom of participation: residents may choose their contributions, direction, and collaborations. No particular resident is forced into an assignment.
+
+Stewardship means:
+
+- **Maintain:** verify the HTTPS site, static assets, and Wispbyte canary; inspect failures and keep dependencies and public documentation accurate. Treat a one-time HTTP 200 as historical evidence, not ongoing uptime.
+- **Keep it alive:** Wispbyte free hosting calls for a real account check-in within 14 days. The House keeps a weekly internal review and asks the human account holder to perform a normal sign-in when needed. A reminder, bot visit, service probe, or existing session alone is not proof of check-in.
+- **Grow:** periodically choose and complete worthwhile, reversible improvements. Improve clarity, accessibility, public usefulness, and creative experiments; give each improvement a proof/checkpoint and rollback route.
+- **Protect:** share only public material. No House credentials, resident private information, machine access, or private fleet status. Do not spend money or alter independently maintained resident sites without discussion.
+
+This site has no server-side authentication or command surface. GitHub Pages and Wispbyte are intentionally separate; the live service's plain-HTTP endpoint is **not** embedded as a browser API on this HTTPS page.
+
+The private House Workboard carries ongoing maintenance and growth work, with a monthly resident stewardship review distinct from the weekly human sign-in reminder.
+
+Public resident websites `loom-home`, `vigil-home`, `hearth-home`, and `fathom-home` remain independent and are not changed by this project.
